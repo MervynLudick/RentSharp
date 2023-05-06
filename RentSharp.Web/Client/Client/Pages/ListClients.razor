@@ -1,0 +1,33 @@
+﻿@page "/clients"
+
+<MudTable Items="@Clients">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Clients</MudText>
+        <MudSpacer />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>First Name</MudTh>
+        <MudTh>Surname</MudTh>
+        <MudTh>Cellphone</MudTh>
+        <MudTh>Id Number</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Nr">@context.FirstName</MudTd>
+        <MudTd DataLabel="Sign">@context.Surname</MudTd>
+        <MudTd DataLabel="Name">@context.Cellphone</MudTd>
+        <MudTd DataLabel="Position">@context.IdNumber</MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>
+
+@code {
+
+    private IEnumerable<CustomerListModel> Clients = new List<CustomerListModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Clients = MockCustomerData.GetCustomers();
+    }
+}
