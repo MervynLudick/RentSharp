@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentSharp.Web.Client", "Ren
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentSharp.Web.Shared", "RentSharp.Web\Shared\RentSharp.Web.Shared.csproj", "{BB754676-1FB3-43B5-A2FA-6ECF221898D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentSharp.Core", "RentSharp.Core\RentSharp.Core.csproj", "{008DF863-B558-4471-A827-B645257C1D20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BB754676-1FB3-43B5-A2FA-6ECF221898D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB754676-1FB3-43B5-A2FA-6ECF221898D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB754676-1FB3-43B5-A2FA-6ECF221898D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008DF863-B558-4471-A827-B645257C1D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008DF863-B558-4471-A827-B645257C1D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008DF863-B558-4471-A827-B645257C1D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008DF863-B558-4471-A827-B645257C1D20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
