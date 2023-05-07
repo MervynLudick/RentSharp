@@ -1,11 +1,11 @@
-﻿namespace RentSharp.Web.Server.Entities
+﻿namespace RentSharp.Core.Entities
 {
     public class Driver
     {
-        public Guid DriverID { get; set; }
+        public Guid DriverId { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
-        public String IDNumber { get; set; }
+        public String IdNumber { get; set; }
         public Media CopyOfID { get; set; }
     }
 }

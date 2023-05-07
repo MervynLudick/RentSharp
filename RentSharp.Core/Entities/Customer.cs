@@ -1,4 +1,4 @@
-﻿namespace RentSharp.Web.Server.Entities
+﻿namespace RentSharp.Core.Entities
 {
     public abstract class Customer
     {
@@ -6,6 +6,5 @@
         public String EmailAddress { get; set; }
         public String Name { get; set; }
         public Address Address { get; set; }
-
     }
 }

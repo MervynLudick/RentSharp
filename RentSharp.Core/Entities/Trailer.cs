@@ -1,4 +1,4 @@
-﻿namespace RentSharp.Web.Server.Entities
+﻿namespace RentSharp.Core.Entities
 {
     public class Trailer
     {
@@ -9,6 +9,5 @@
         public DateTime DateAdded { get; set; }
         public Boolean IsActive { get; set; }
         public TrailerType TrailerType { get; set; }
-
     }
 }

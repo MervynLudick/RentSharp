@@ -1,9 +1,9 @@
-﻿using RentSharp.Web.Server.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RentSharp.Core.Entities;
 
 namespace RentSharp.Core.Services
 {
@@ -14,7 +14,7 @@ namespace RentSharp.Core.Services
             return trailer;
         }
 
-        public Boolean DeleteTrailer(Guid trailerID)
+        public Boolean DeleteTrailer(Guid trailerId)
         {
             // set as inactive
             return true;

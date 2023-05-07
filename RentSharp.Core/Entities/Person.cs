@@ -1,4 +1,4 @@
-﻿namespace RentSharp.Web.Server.Entities
+﻿namespace RentSharp.Core.Entities
 {
     public class Person: Customer
     {
