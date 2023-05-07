@@ -1,0 +1,70 @@
+﻿@page "/customers/add"
+
+@using RentSharp.Web.Shared.ViewModels
+
+<EditForm model="@_model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>
+    <MudGrid>
+        <MudItem xs="12" sm="8">
+            <MudCard>
+                <MudCardContent>
+                    <MudTextField Label="First name" HelperText="Max. 8 characters"
+                                  @bind-Value="_model.FirstName" For="@(() => _model.FirstName)"/>
+                    <MudTextField Label="Surname" Class="mt-3"
+                                  @bind-Value="_model.Surname" For="@(() => _model.Surname)"/>
+                    <MudTextField Label="Cellphone" HelperText="Choose a strong password" Class="mt-3"
+                                  @bind-Value="_model.Cellphone" For="@(() => _model.Cellphone)" />
+                    <MudTextField Label="Email" Class="mt-3"
+                                  @bind-Value="_model.EmailAddress" For="@(() => _model.EmailAddress)" />
+                    <MudTextField Label="Id Number" Class="mt-3"
+                                  @bind-Value="_model.IdNumber" For="@(() => _model.IdNumber)" />
+                    <MudTextField Label="Address Line 1" Class="mt-3"
+                                  @bind-Value="_model.AddressLine1" For="@(() => _model.AddressLine1)" />
+                    <MudTextField Label="Address Line 2" Class="mt-3"
+                                  @bind-Value="_model.AddressLine2" For="@(() => _model.AddressLine2)" />
+                    <MudTextField Label="Suburb" Class="mt-3"
+                                  @bind-Value="_model.Suburb" For="@(() => _model.Suburb)" />
+                    <MudTextField Label="City" Class="mt-3"
+                                  @bind-Value="_model.City" For="@(() => _model.City)" />
+                    <MudTextField Label="Postal Code" Class="mt-3"
+                                  @bind-Value="_model.PostalCode" For="@(() => _model.PostalCode)" />
+                    
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Register</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+        <MudItem xs = "12">
+            <MudPaper Class="pa-4 mud-height-full">
+                <MudText Typo="Typo.subtitle2">Validation Summary</MudText>
+                @if (success)
+                {
+                    <MudText Color="Color.Success">Success</MudText>
+                }
+                else
+                {
+                    <MudText Color="@Color.Error">
+                        <ValidationSummary />
+                    </MudText>
+                }
+            </MudPaper>
+        </MudItem>
+        
+    </MudGrid>
+</EditForm>
+
+
+
+@code
+{
+    CreateCustomerViewModel _model = new ();
+    bool success;
+
+    private void OnValidSubmit()
+    {
+        success = true;
+        Console.WriteLine("OnValidSubmit");
+    }
+
+}

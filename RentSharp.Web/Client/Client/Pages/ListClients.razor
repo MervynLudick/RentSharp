@@ -1,5 +1,7 @@
 ﻿@page "/clients"
+@inject NavigationManager NavigationManager
 
+<MudButton @onclick='() => NavigationManager.NavigateTo("/customers/add")' Class="mb-3" ButtonType="ButtonType.Button" Variant="Variant.Filled" Color="Color.Primary">Add New</MudButton>
 <MudTable Items="@Clients">
     <ToolBarContent>
         <MudText Typo="Typo.h6">Clients</MudText>
